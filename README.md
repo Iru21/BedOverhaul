@@ -1,4 +1,6 @@
-# BedOverhaul
+# Bed Overhaul
+
+![](https://github.com/Iru21/BedOverhaul/raw/master/src/main/resources/assets/bedoverhaul/icon.png)
 
 Making this mod I wanted to address the issue where new players did not try to survive the first night my make a bed (or find it in a village) and just skip it!
 
