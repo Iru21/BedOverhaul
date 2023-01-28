@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.iru.bedoverhaul.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BedBlockEntityMixin",
+    "BedBlockMixin",
+    "PlayerEntityMixin",
+    "ServerPlayerEntityMixin",
+    "SleepManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

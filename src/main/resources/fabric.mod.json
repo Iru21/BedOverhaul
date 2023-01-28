@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bedoverhaul",
+  "version": "${version}",
+  "name": "BedOverhaul",
+  "description": "Requires the player to use a compass and a clock on the bed to save spawn point and skip the night respectively",
+  "authors": [
+    "Iru21"
+  ],
+  "contact": {
+    "website": "https://iru.codes",
+    "repo": "https://github.com/Iru21/BedOverhaul"
+  },
+  "license": "MIT",
+  "icon": "assets/bedoverhaul/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "preLaunch": [
+      "com.llamalad7.mixinextras.MixinExtrasBootstrap::init"
+    ]
+  },
+  "mixins": [
+    "bedoverhaul.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric": "*",
+    "minecraft": "1.19.3"
+  }
+}
