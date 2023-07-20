@@ -23,12 +23,12 @@ public class BedUpgradeHelper {
         }
         switch (upgrade) {
             case SpawnPointUpgrade -> {
-                firstHalf.setCanSetSpawnPoint(true);
-                secondHalf.setCanSetSpawnPoint(true);
+                firstHalf.bedOverhaul$setCanSetSpawnPoint(true);
+                secondHalf.bedOverhaul$setCanSetSpawnPoint(true);
             }
             case TimeResetUpgrade -> {
-                firstHalf.setCanResetTime(true);
-                secondHalf.setCanResetTime(true);
+                firstHalf.bedOverhaul$setCanResetTime(true);
+                secondHalf.bedOverhaul$setCanResetTime(true);
             }
         }
         return true;

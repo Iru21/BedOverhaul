@@ -33,8 +33,8 @@ public abstract class SleepManagerMixin {
 
             Optional<BlockPos> pos = serverPlayerEntity.getSleepingPosition();
             if(pos.isPresent()) {
-                ModifiedBedBlockEntity bed = (ModifiedBedBlockEntity) serverPlayerEntity.world.getBlockEntity(pos.get());
-                if(bed != null && !bed.getCanResetTime()) continue;
+                ModifiedBedBlockEntity bed = (ModifiedBedBlockEntity) serverPlayerEntity.getWorld().getBlockEntity(pos.get());
+                if(bed != null && !bed.bedOverhaul$getCanResetTime()) continue;
             }
 
             ++this.sleeping;

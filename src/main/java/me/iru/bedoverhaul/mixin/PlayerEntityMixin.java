@@ -28,8 +28,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         boolean isBedUpgraded = false;
         Optional<BlockPos> pos = this.getSleepingPosition();
         if(pos.isPresent()) {
-            ModifiedBedBlockEntity bed = (ModifiedBedBlockEntity) this.world.getBlockEntity(pos.get());
-            if(bed != null) isBedUpgraded = bed.getCanResetTime();
+            ModifiedBedBlockEntity bed = (ModifiedBedBlockEntity) this.getWorld().getBlockEntity(pos.get());
+            if(bed != null) isBedUpgraded = bed.bedOverhaul$getCanResetTime();
         }
         cir.setReturnValue(this.isSleeping() && this.sleepTimer >= 100 && isBedUpgraded);
         cir.cancel();

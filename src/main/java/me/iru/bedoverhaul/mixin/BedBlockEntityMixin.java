@@ -8,11 +8,14 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(BedBlockEntity.class)
 public abstract class BedBlockEntityMixin extends BlockEntity implements ModifiedBedBlockEntity {
 
+    @Unique
     private boolean canResetTime = false;
+    @Unique
     private boolean canSetSpawnPoint = false;
 
     public BedBlockEntityMixin(BlockEntityType<BedBlockEntity> type, BlockPos pos, BlockState state) {
@@ -20,22 +23,22 @@ public abstract class BedBlockEntityMixin extends BlockEntity implements Modifie
     }
 
     @Override
-    public Boolean getCanResetTime() {
+    public Boolean bedOverhaul$getCanResetTime() {
         return this.canResetTime;
     }
 
     @Override
-    public void setCanResetTime(Boolean value) {
+    public void bedOverhaul$setCanResetTime(Boolean value) {
         this.canResetTime = value;
     }
 
     @Override
-    public Boolean getCanSetSpawnPoint() {
+    public Boolean bedOverhaul$getCanSetSpawnPoint() {
         return this.canSetSpawnPoint;
     }
 
     @Override
-    public void setCanSetSpawnPoint(Boolean value) {
+    public void bedOverhaul$setCanSetSpawnPoint(Boolean value) {
         this.canSetSpawnPoint = value;
     }
 
